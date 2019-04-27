@@ -24,7 +24,7 @@ module Google
 
     def search
       response = Faraday.get endpoint_url
-      JSON.parse(resp.body)['candidates'].first['place_id']
+      JSON.parse(response.body)['candidates'].first['place_id']
     end
   end
 end
