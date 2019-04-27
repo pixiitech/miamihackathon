@@ -1,12 +1,14 @@
 <div class="card">
-  <div class="card-image">
-    <%= image_tag(image) %>
-    <span class="card-title"><%= title %></span>
+  <div class="image-details">
+    <div class="card-image" style="background: url(<%= image %>);" }></div>
+   <div class="title">
+    <span class="card-title black-text"><%= title %></span>
+   </div>
   </div>
   <div class="card-content">
     <p><%= description %></p>
   </div>
   <div class="card-action">
-    <a href="#">This is a link</a>
+    <a href="#">More details</a>
   </div>
 </div>

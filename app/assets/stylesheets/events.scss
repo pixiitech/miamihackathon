@@ -1,3 +1,40 @@
 // Place all the styles related to the events controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.container { 
+  &.event-container {
+    width: 80%;
+ }
+}
+.card {
+  height: 450px;
+
+ .card-title {
+   &.black-text {
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+   }
+}
+}
+.card-content {
+  height: 200px;
+}
+.card-image {
+  height: 130px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.card-title {
+  color: black;
+  font-weight: bold;
+}
+
+.title {
+  padding: 0 8px;
+}
+.card-action {
+  height: 50px;
+}
