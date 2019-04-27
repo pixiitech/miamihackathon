@@ -3,8 +3,11 @@
 <% @events.in_groups_of(3, false).each do |group| %>
   <div class="row">
     <% group.each do |event| %>
+    <% image = event.nodes[36].nodes.last&.nodes&.first&.text || "miami.jpg" %>
+    <% title = event.nodes.first.text&.truncate(30) || "Untitled" %>
+    <% description = event.nodes.third.text&.truncate(100) || "No description" %>
       <div class="col s4">
-        <%= render 'event', event: event %>
+        <%= render 'event', event: event, image: image, title: title, description: description %>
       </div>
       <% end %>
   </div>
