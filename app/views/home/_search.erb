@@ -1,8 +1,11 @@
 <div class="row container">
   <div class="row">
+    <%= form_tag url: root_path, method: :get do %>
       <div class="input-field col s6">
-          <input id="input_text" type="text" data-length="10">
-          <label for="input_text">Search</label>
+          <input id="search_keyword" type="text" data-length="10" />
+          <label for="search_keyword">Search</label>
+          <input type='submit' value='Go'/>
       </div>
+    <%- end %>
   </div>
 </div>
