@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   post '/', to: 'images#index'
   get 'images', to: 'images#index'
   root to: 'home#index'
+  get 'travel_tips', to: 'home#travel_tips'
 end
