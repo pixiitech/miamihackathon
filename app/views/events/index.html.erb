@@ -1,14 +1,14 @@
-<h1>Events#index</h1>
-
-<% @events.in_groups_of(3, false).each do |group| %>
-  <div class="row">
-    <% group.each do |event| %>
-    <% image = event.nodes[36].nodes.last&.nodes&.first&.text || "miami.jpg" %>
-    <% title = event.nodes.first.text&.truncate(30) || "Untitled" %>
-    <% description = event.nodes.third.text&.truncate(100) || "No description" %>
-      <div class="col s4">
-        <%= render 'event', event: event, image: image, title: title, description: description %>
-      </div>
-      <% end %>
+<div class="container event-container">
+  <% @events.in_groups_of(4, false).each do |group| %>
+    <div class="row">
+      <% group.each do |event| %>
+      <% image = event.nodes[36].nodes.last&.nodes&.first&.text || "01.jpg" %>
+      <% title = event.nodes.first.text&.truncate(30) || "Untitled" %>
+      <% description = event.nodes.third.text&.truncate(100) || "No description" %>
+        <div class="col s3">
+          <%= render 'event', event: event, image: image, title: title, description: description %>
+        </div>
+        <% end %>
+    </div>
+  <% end %>
   </div>
-<% end %>
