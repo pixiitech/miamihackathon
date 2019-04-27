@@ -1,0 +1,18 @@
+<div class="col s12 m3">
+  <div class="card">
+    <div class="card-image">
+      <%=image_tag image_url %>
+      <span class="card-title"><%= title %></span>
+    </div>
+    <%- if card_content %>
+      <div class="card-content">
+        <p><%= card_content %></p>
+      </div>
+    <% end %>
+    <%- if card_url %>
+      <div class="card-action">
+        <%= link_to card_link_text, card_url %>
+      </div>
+    <% end %>
+  </div>
+</div>

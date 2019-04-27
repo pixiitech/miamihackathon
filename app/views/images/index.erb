@@ -1,4 +1,10 @@
 <%= render 'shared/parallax' %>
 <div class="section white">
-  <%=render "./home/results"%>
+  <%- @city_image_urls.each_slice(4) do |group| %>
+    <div class="row">
+      <%- group.each do |url| %>
+        <%= render "shared/card", title: '', card_content: '', card_url: '', card_link_text: '', card_url: '', image_url: url %>
+      <% end %>
+    </div>
+  <% end %>
 </div>
