@@ -1,10 +1,10 @@
 <div class="row container">
   <div class="row">
-    <%= form_tag url: root_path, method: :get do %>
+    <%= form_tag url: images_path, method: :get do %>
       <div class="input-field col s6">
-          <input id="search_keyword" type="text" data-length="10" />
-          <label for="search_keyword">Search</label>
-          <input type='submit' value='Go'/>
+        <%= search_field_tag :search_keyword %>
+        <label for="search_keyword">Search</label>
+        <%= submit_tag 'Go' %>
       </div>
     <%- end %>
   </div>

@@ -1,0 +1,12 @@
+<div class="parallax-container">
+  <div class="parallax">
+    <%- if @city_image_urls.present? %>
+      <%= image_tag @city_image_urls.sample %></div>
+    <% else %>
+      <%=image_tag "111.jpg" %>
+    <% end %>
+  </div>
+</div>
+<div class="section white">
+  <%=render "./home/search"%>
+</div>

@@ -1,12 +1,1 @@
-<div class="parallax-container">
-  <%- if @city_image_urls.present? %>
-    <%- @city_image_urls.each do |url| %>
-      <div class="parallax"><%= image_tag url %></div>
-    <% end %>
-  <% else %>
-    <div class="parallax"><%=image_tag "111.jpg" %></div>
-  <% end %>
-</div>
-<div class="section white">
-  <%=render "./home/search"%>
-</div>
+<%= render 'shared/parallax' %>
