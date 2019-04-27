@@ -11,14 +11,14 @@ module Eventful
     end
 
     def search
-      conn = Faraday.new(url: 'http://api.eventful.com/json/events/search') do |builder|
+      conn = Faraday.new(url: 'http://api.eventful.com/rest/events/search') do |builder|
         builder.request :retry
         builder.params = params
         builder.response :logger
         builder.adapter :net_http
       end
       response = conn.get
-      JSON.parse(response.body)
+      events = Ox.load(response.body).nodes.first.nodes.last.nodes
     end
   end
 end
