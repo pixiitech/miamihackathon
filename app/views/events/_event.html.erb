@@ -1,7 +1,9 @@
 
 <div class="row">
   <div class="col s12">
-    <%= event.nodes[36].text %>
+    <% if event.nodes[36].nodes.first&.text %>
+      <%= image_tag(event.nodes[36].nodes.first.text) %>
+    <% end %>
   </div>
 </div>
 <div class="row">
