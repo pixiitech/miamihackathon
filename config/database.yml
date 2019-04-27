@@ -22,4 +22,9 @@ test:
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  adapter: postgresql
+  host: localhost
+  database: miamihackathon_prod
+  username: postgres
+  password: miamihackathon_prod_pw19
+  encoding: UTF8
