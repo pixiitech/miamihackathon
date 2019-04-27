@@ -1,11 +1,11 @@
 <nav>
   <div class="nav-wrapper blue">
-    <a href="#" class="brand-logo center">What's Happening in <%= session[:search_keyword].presence || '...' %></a>
+    <%= link_to "What's Happening in #{session[:search_keyword].presence || '...'}", root_path, class: "brand-logo center" %>
     <ul id="nav-mobile" class="left hide-on-med-and-down">
-        <li><a href="sass.html"><i class="material-icons">view_module</i></a></li>
-        <li><a href="sass.html"><i class="material-icons">search</i></a></li>
-        <li><a href="badges.html">Thoughts</a></li>
-        <li><a href="collapsible.html">Happenings</a></li>
+        <li><a href="#"><i class="material-icons">view_module</i></a></li>
+        <li><a href="#"><i class="material-icons">search</i></a></li>
+        <li><%= link_to "Sights", images_path %></li>
+        <li><%= link_to "Thoughts", events_index_path %></li>
     </ul>
   </div>
 </nav>
